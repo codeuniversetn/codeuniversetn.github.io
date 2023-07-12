@@ -136,7 +136,6 @@ function getResponse(message) {
 // switcher francais anglais presentation
 
 function switcher_presentation(){
-  const titre1 = document.querySelector(".titre1");
   const titre2 = document.querySelector(".titre2");
   const titre3 = document.querySelector(".titre3");
   const p1 = document.querySelector(".p1");
@@ -145,17 +144,15 @@ function switcher_presentation(){
   const inactive=document.querySelector(".inactive-language");
   const translations = {
     FR: {
-      titre1: "PRÉSENTATION DE LA SOCIÉTÉ",
-      p1:"Biotools-Tunisia SARL, est une société basée en Tunisie qui propose une large gamme de produits et services pour les Sciences de la Vie, la Pharmacie, la Biotechnologie, les Centres de Recherche Hospitaliers et Médicaux.La demande des utilisateurs nous a amenés à mettre à jour régulièrement nos activités. En tant que partenaire de connaissances des entreprises manufacturières, des institutions universitaires et de la recherche dans les sciences de la vie et le diagnostic, nous fournissons des solutions complètes pour la biologie moléculaire et les domaines connexes.",
-      p2:"Biotools Tunisie SARL a été fondée en 2006 et depuis cette date, nous n'avons cessé de grandir en actualisant nos activités. Biotools a commencé par la distribution de réactifs de biologie moléculaire. Depuis 2010, notre activité s'est étendue aux équipements liés à la Biologie Moléculaire. À partir de 2019, nous avons élargi notre division de diagnostic pour l'oncologie et les maladies infectieuses en utilisant des plateformes de biologie moléculaire. Notre société est un distributeur bien connu et leader d'équipements et de réactifs de laboratoire et scientifiques de qualité supérieure sur le marché tunisien. En fait, nous avons de nombreux partenaires de fabrication à travers le monde.",
+      p1:"Biotools SARL, basée en Tunisie, propose une large gamme de produits et services pour la Vie Sciences, pharmaceutiques, biotechnologies, hôpitaux et centres de recherche médicale. Utilisateur la demande nous a conduit à actualiser régulièrement nos activités. En tant que partenaire de connaissances de la fabrication entreprises, institutions académiques et recherche en sciences de la vie et diagnostic, nous fournir des solutions complètes pour la biologie moléculaire et les domaines connexes.",
+      p2:"Biotools SARL a été fondée en 2006 et n'a cessé de se développer en mettant régulièrement à jour notre activités. Nous avons commencé par la distribution de réactifs de biologie moléculaire, et depuis 2010, notre périmètre s'est élargi pour inclure les équipements associés. Notre entreprise est maintenant reconnu comme un distributeur bien établi et leader de laboratoire et de qualité supérieure équipements scientifiques et réactifs sur le marché nord-africain. Nous collaborons avec top partenaires de fabrication du monde entier.",
       p3:"Nous fournissons une gamme complète de réactifs et d'instruments de laboratoire utilisés dans les hôpitaux, les instituts d'enseignement et les laboratoires de recherche, en nous concentrant principalement sur la biologie moléculaire.",
       titre2: "Historique de l'entreprise :",
       titre3: "Activité principale:",
     },
     EN: {
-      titre1: "COMPANY PRESENTATION",
-      p1:"Biotools-Tunisia SARL, is a company based in Tunisia which offers a wide range of products and services for Life Science, Pharmaceutical, Biotechnology, Hospital and Medical Research Centers.User demand led us regularly update our activities. As a knowledge partner of manufacturing companies, academic institutions and research in the life sciences and diagnostics, we provide comprehensive solutions for molecular biology and related fields.",
-      p2:"Biotools Tunisia SARL was founded in 2006 and since that date, we have not stopped growing by updating our activities. Biotools began with the distribution of molecular biology reagents. Since 2010, our activity has extended to equipment related to Molecular Biology. Starting in 2019, we have expanded our diagnostic division for oncology and infectious diseases using molecular biology platforms.Our company is a well-known and leading distributor of premium quality of laboratory and scientific equipment and reagents on the Tunisian market. In fact, we have many manufacturing partners around the world.",
+      p1:"Biotools SARL, based in Tunisia, offers a wide range of products and services for Life Science, Pharmaceutical, Biotechnology, Hospital and Medical Research Centers. User demand led us regularly update our activities. As a knowledge partner of manufacturing companies, academic institutions and research in the life sciences and diagnostics, we provide comprehensive solutions for molecular biology and related fields.",
+      p2:"Biotools SARL was founded in 2006 and has continued to grow by regularly updating our activities. We initially started with the distribution of molecular biology reagents, and since 2010, our scope has expanded to include related equipment. Our company is now recognized as a well-established and leading distributor of premium-quality laboratory and scientific equipment and reagents in the North African market. We collaborate with top manufacturing partners from around the world.",
       p3:"We provide a complete range of Laboratory Reagents and Instruments served in Hospitals, Educational Institutes and Research Laboratories, focusing mainly on Molecular Biology.",
       titre2: "Company History:",
       titre3: "Main activity:",
@@ -163,7 +160,6 @@ function switcher_presentation(){
   };
   if(inactive.innerHTML=="EN"){
       inactive.innerHTML="FR"
-      titre1.innerHTML = translations.EN.titre1;
       p1.innerHTML = translations.EN.p1;
       titre2.innerHTML = translations.EN.titre2;
       p2.innerHTML = translations.EN.p2;
@@ -172,7 +168,6 @@ function switcher_presentation(){
   }
   else{
       inactive.innerHTML="EN"
-      titre1.innerHTML = translations.FR.titre1;
       p1.innerHTML = translations.FR.p1;
       titre2.innerHTML = translations.FR.titre2;
       p2.innerHTML = translations.FR.p2;
@@ -283,40 +278,6 @@ function tzahlik(){
 }
 
 
-
-
-// search filtre
-const searchInput = document.getElementById('search');
-const fa=document.querySelector('.fa');
-const itemsList = document.getElementById('items');
-function lista(){
-    for (let i = 0; i < itemsList.children.length; i++) {
-    const item = itemsList.children[i];
-    const text = item.textContent.toLowerCase();
-      item.style.display = 'none';
-  }
-  search.style="border-radius: 10px;"
-  fa.style="border-radius: 0px 10px 10px 0px ;"
-}
-searchInput.addEventListener('input', () => {
-  const searchValue = searchInput.value.toLowerCase();
-  
-  // loop through all items and check if they match the search term
-  for (let i = 0; i < itemsList.children.length; i++) {
-    const item = itemsList.children[i];
-    const text = item.textContent.toLowerCase();
-    
-    if (text.includes(searchValue)) {
-      item.style.display = 'block';
-      search.style="border-radius: 10px 10px 0px 0px ;"
-      fa.style="border-radius: 0px 10px 0px 0px ;"
-    } else {
-      item.style.display = 'none';
-      search.style="border-radius: 10px 10px 0px 0px ;"
-      fa.style="border-radius: 0px 10px 0px 0px ;"
-    }
-  }
-});
 
 const slidingin = () =>{
   const slide=document.querySelector('.video_container');
