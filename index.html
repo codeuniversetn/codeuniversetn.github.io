@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="site de BioTools">
+    <meta name="keywords" content="biologie,tunisie,biotools,tn">
+    <link rel="apple-touch-icon" href="logo.png">
+    <link rel="icon" type="image/x-icon" href="img/favicon.png">
+    <title>BioTools</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
+    
+</head>
+<body onload="tzahlik()" >
+    <header class="header">
+        <nav>
+            <div class="language-switch">
+                <span class="inactive-language" onclick="switcher_home()">FR</span>
+              </div>
+              
+            <input class="menu-btn" type="checkbox" id="menu-btn" onclick="blurfocus()"/>
+            <label class="menu-icon" for="menu-btn">
+                <span class="navicon"></span>
+            </label>
+            <img src="img/logo.png" alt="" id="logo">
+            <h2 class="nav-title">BioTools</h2>
+            <ul class="menu">
+                <li class="nav-item"><a href="index.html" class="a2">HOME</a> </li>
+                <li class="nav-item"><a href="prsentation.html" class="a2">PRESENTATION</a></li>
+                <li class="dropdown ">
+                    <a href="#" class="dropdown-toggle">PRODUCT</a>
+                    <ul class="dropdown-content">
+                      <li class="dropdown1">
+                        <a href="#" class="dropdown-toggle1">EQUIPEMENTS</a>
+                        <ul class="dropdown-content1">
+                            <li class="dropdown4">
+                                <a href="#" class="dropdown-toggle4">MOLECULAR BIOLOGY</a>
+                                <ul class="dropdown-content4">
+                                    <li><a href="pcr.html">PCR</a></li>
+                                    <li><a href="electro.html">ELECTROPHORESIS</a></li>
+                                    <li><a href="gel.html">GEL DOC</a></li>
+                                    <li class="dropdown12">
+                                        <a href="#" class="dropdown-toggle12">NGS</a>
+                                        <ul class="dropdown-content12">
+                                            <li><a href="devices.html">DEVICES</a></li>
+                                            <li><a href="consu.html">CONSUMABLES</a></li>
+                                        </ul>
+                                     </li>
+                                     <li> <a href="dna.html">DNA/RNA PURIFICATION</a> </li>
+                                </ul>
+                             </li>
+                            <li class="dropdown2">
+                                <a href="#" class="dropdown-toggle2">ANALYTIC INSTRUMENTS</a> 
+                                <ul class="dropdown-content2">
+                                    <li><a href="spectro.html">SPECTROPHOTOMETERS</a> </li>
+                                    <li><a href="microplate.html">MICROPLATE READER</a> </li>
+                                    <li><a href="https://www.coleparmer.com/i/jenway-3510-standard-digital-ph-meter-kit-230-vac-eu/3545906">PH METERS</a> </li>
+                                    <li><a href="https://www.belengineering.com/">BALANCES</a> </li>
+                                    <li><a href="nano.html">NANODROP</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown3">
+                                <a href="#" class="dropdown-toggle3">LABORATORY EQUIPEMENTS</a>
+                                <ul class="dropdown-content3">
+                                    <li><a href="centrifuges.html">CENTRIFUGES</a></li>
+                                    <li><a href="autoclaves.html">AUTOCLAVES</a></li>
+                                    <li class="dropdown10">
+                                        <a href="#" class="dropdown-toggle10">HEATING INSTRUMENTS</a>
+                                        <ul class="dropdown-content10">
+                                            <li><a href="ovens.html">OVENS/INCUBATORS</a></li>
+                                            <li><a href="shaking.html">SHAKING INCUBATORS</a></li>
+                                            <li><a href="temperature.html">TEMPERATURE CONTROL BATHS</a></li>
+                                            <li><a href="hotplate.html">HOT PLATE STIRRERS</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="https://www.labnetinternational.com/products/liquid-handling-products">LIQUID HANDLING</a></li>
+
+                                </ul>
+                             </li>
+                        </ul>
+                      </li>
+                      <li class="dropdown5">
+                        <a href="#" class="dropdown-toggle5">REAGENTS</a>
+                        <ul class="dropdown-content5">
+                            <li class="dropdown6" >
+                                <a href="#" class="dropdown-toggle6">MOLECULAR BIOLOGY</a>
+                                <ul class="dropdown-content6">
+                                    <li><a href="molecular.html">MOLECULAR BIOLOGY REAGENTS</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                      <li><a href="https://www.masciabrunelli.it/prodotti.asp?id1=01&id2=42&UseLng=en">CULTURE MEDIA</a></li>
+                      <li><a href="consoumable.html">CONSUMABLES</a></li> 
+                    </ul>
+                  </li>
+                <li class="dropdown7">
+                    <a href="news.html">NEWS</a>
+                </li>
+              
+                <li class="nav-item"><a href="contacte.html" class="a2">CONTACT</a></li>
+            </ul>
+            <div class="filtre_container">
+                <div class="search-container">
+                    <input type="text" id="search" placeholder="Search..." >
+                    <i class="fa fa-search"></i>
+                  </div>
+                
+                <ul id="items" onmouseleave="lista()">
+                    <li class="li"><a href="spectro.html">spectrophotometers</a> </li>
+                    <li class="li"><a href="consoumable.html">consumables</a> </li>
+                    <li class="li"><a href="pcr.html">pcr</a> </li>
+                    <li class="li"><a href="electro.html">electrophoresis</a> </li>
+                    <li class="li"><a href="gel.html">gel doc</a> </li>
+                    <li class="li"><a href="platform.html">platform</a> </li>
+                </ul>
+        </div>
+        </nav>
+      <section class="big_container_video"   >
+        <div class="video_container" onmouseenter="lista()" onclick="slidingin()">
+            <div class="title_container">
+                <p class="title">Welcome to Biotools !</p>
+                <p class="title2">Leader in DNA tchnology  </p>
+            </div>
+                <img src="img/backk.png" alt="" class="back">
+                <video  loop class="video1" id="video1" autoplay muted> 
+                    <source src="img/video_un.mp4" type="video/mp4"/>
+                    presentation video
+                  </video>
+        </div>
+        <div class="video_container2" onclick="slidingout()">
+            <div class="title_container ">
+                <p class="title3">NanoBiotools : New Division </p>
+                <p class="slogan">Unleash Genome Power with our Breakthrough DNA Sequencers</p>
+            </div>
+                <img src="img/backk.png" alt="" class="back2">
+                <video autoplay loop class="video1" muted> 
+                    <source src="img/video2.mp4" type="video/mp4"/>
+                    presentation video
+                  </video>
+        </div>
+      </section>
+    <div class="container" style="display:none;">
+        <div class="slider">
+            <img src="img/7.png" class="active" >
+            <img src="img/1.jpg">
+            <img src="img/2.png">
+            <img src="img/3.png" >
+            <img src="img/4.png" >
+            <img src="img/5.png" >
+            <img src="img/6.png" >
+            <i class="fas fa-angle-left" id="right"  ></i>
+            <i class="fas fa-angle-right" id="left"  ></i>
+        </div>
+            </div>
+    </div>
+    </header>
+    <br>
+    <main class="main">
+       <section class="big_container">
+            <div class="container2">
+                <p class="p1_home">Biotools-Tunisia SARL, is a company based in Tunisia which offers a wide range of products and services for Life Science, Pharmaceutical, Biotechnology, Hospital and Medical Research Centers.</p>
+                <img src="img/pres.jpg" alt="" class="image1">
+            </div>
+            <div class="container2">
+                <img src="img/1.jpg" alt="" class="image1">
+                <p class="p2_home">Biotools Tunisia SARL provides a complete range of Laboratory Reagents and Instruments served in Hospitals, Educational Institutes and Research Laboratories, focusing mainly on Molecular Biology.</p>
+            </div>
+            <div class="container2">
+                <p class="p3_home">Biotools Tunisia SARL was founded in 2006 and since that date, we have not stopped growing by updating our activities. Biotools began with the distribution of molecular biology reagents.</p>
+                <img src="img/history.jpg" alt="" class="image1">
+            </div>
+       </section>
+            
+      <div id="chat-container" onmouseleave="closechat()">
+        <img src="img/chat.png" alt="" class="openchat" onclick="openchat()">
+        <h3 class="chatboot_title">Ask for something here !</h3>
+        <img src="img/logo.png" alt="" style="width: 50px;border-radius: 10px 10px 0px 0px;">
+        <div id="chat-output">
+        </div>
+        <input type="text" id="chat-input" placeholder="CLICK !!">
+        <img src="img/envoyer.png" alt="" class="envoyer" onclick="chatt()">
+      </div>
+    </main>
+    <footer class="footer">
+        <div class="icon_container">
+            <a href="https://www.linkedin.com/in/biotools-sarl-tunisie-496218265/?fbclid=IwAR1krRHse-h6CkSfjpt6g8PED2IbLBRAA_ojfmc7LKfVN2psllQtCMOk780"><i class="fa-brands fa-linkedin"></i></a> 
+            <a href="https://www.facebook.com/profile.php?id=100090023893311"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://twitter.com/BiotoolsTUN"><i class="fa-brands fa-twitter"></i></a>
+        </div>
+        <div class="partenaire_container">
+            <a href="https://www.belengineering.com/"><img src="./img/partenaire/BELEngineering.png" alt=""></a>
+            <a href="https://www.benchmarkscientific.com/"><img src="./img/partenaire/Benchmark.png" alt=""></a>
+            <a href="http://www.biolifeit.com/"><img src="./img/partenaire/Biolifa.png" alt=""></a>
+            <a href="http://www.favorgen.com/"><img src="./img/partenaire/Favorgene.png" alt=""></a>
+            <a href="https://www.france-etuves.com/FR/index.php"><img src="./img/partenaire/France Etuve.png" alt=""></a>
+            <a href="https://www.hermle-labortechnik.de/en/home.html"><img src="./img/partenaire/hermle.png" alt=""></a>
+            <a href="https://www.jenabioscience.com/"><img src="./img/partenaire/Jena Bioscience.png" alt=""></a>
+            <a href="https://www.labnetinternational.com/"><img src="./img/partenaire/Labnet.png" alt=""></a>
+            <a href="https://www.liofilchem.com/"><img src="./img/partenaire/Liofilchem.png" alt=""></a>
+            <a href="https://nanoporetech.com/"><img src="./img/partenaire/Oxford Nanopore Technology.png" alt=""></a>
+            <a href="https://www.shp-steriltechnik.de/"><img src="./img/partenaire/SHP Steriltechnik.png" alt=""></a>
+            <a href="https://www.veladx.com/"><img src="./img/partenaire/vela_logo.png" alt=""></a>
+            <a href="https://www.vilber.com/"><img src="./img/partenaire/Vilber Lourmat.png" alt=""></a>
+        </div>
+  </footer>
+    <script src="app.js"></script>
+</body>
+
+</html>
